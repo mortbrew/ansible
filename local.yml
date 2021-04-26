@@ -9,13 +9,13 @@
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu"]
       
-- hosts: eagle2
-  tasks:
-    - name: Install neofetch
-      become: true
-      apt:
-        name: neofetch
-        state: absent
+tasks:
+  - name: Install neofetch
+    become: true
+    apt:
+      name: neofetch
+      state: absent
+    when: hostname == eagle
 
 # run roles
 #- hosts: all
