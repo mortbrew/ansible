@@ -9,14 +9,24 @@
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu"]
 
+# run roles
 - hosts: all
-  tasks:
-    - name: Install neofetch
-      become: true
-      apt:
-        name: neofetch
-        state: absent
-      when: ansible_facts['ansible_nodename'] == "eagle"
+  tags: base
+  become: true
+  roles:
+    - base
+
+- hosts: workstation
+  tags: workstation
+  become: true
+  roles:
+    - workstation
+
+- hosts: server
+  tags: server
+  become: true
+  roles:
+    - server
 
 # run roles
 #- hosts: all
