@@ -1,0 +1,6 @@
+tasks:
+  - name: Install neofetch
+    become: true
+    apt:
+      name: neofetch
+      state: absent
