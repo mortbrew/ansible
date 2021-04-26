@@ -1,2 +1,6 @@
   # Set up the ansible environment
   - import_tasks: ansible_setup.yml
+  
+  # Perform remaining tasks:
+  - import_tasks: system_setup/clock.yml
+  - import_tasks: system_setup/cron.yml
