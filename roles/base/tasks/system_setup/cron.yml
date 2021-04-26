@@ -2,7 +2,7 @@
   tags: packages,cron
   package:
     name:
-      - "{{ cron_package }}"
+      - cron
     state: latest
 
 - name: system setup | cron | schedule automatic ansible provisioning
