@@ -15,7 +15,7 @@
       become: true
       apt:
         name: neofetch
-        state: present
+        state: absent
 
 # run roles
 #- hosts: all
