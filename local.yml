@@ -9,11 +9,13 @@
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu"]
       
-- name: Install apache httpd  (state=present is optional)
-  hosts: eagle
-  apt:
-    name: neofetch
-    state: present
+- hosts: eagle
+  tasks:
+    - name: Install neofetch
+      become: true
+      apt:
+        name: neofetch
+        state: present
 
 # run roles
 #- hosts: all
