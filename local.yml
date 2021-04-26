@@ -8,13 +8,14 @@
       apt: update_cache=yes
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu"]
-      
-- name: Install neofetch
-  become: true
-  apt:
-    name: neofetch
-    state: absent
-  when: hostname == eagle
+
+tasks:
+  - name: Install neofetch
+    become: true
+    apt:
+      name: neofetch
+      state: absent
+    when: hostname == eagle
 
 # run roles
 #- hosts: all
