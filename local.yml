@@ -9,7 +9,7 @@
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu"]
       
-- hosts: eagle
+- hosts: eagle2
   tasks:
     - name: Install neofetch
       become: true
