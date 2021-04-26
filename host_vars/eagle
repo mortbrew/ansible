@@ -1,0 +1,7 @@
+ansible_cron_minute: "1"
+ssh_port: 22
+ssh_users: "user1 user2"
+
+# server
+docker: true
+portainer: true
