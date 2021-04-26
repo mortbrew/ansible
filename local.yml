@@ -16,7 +16,7 @@
       apt:
         name: neofetch
         state: absent
-      when: ansible_facts['ansible_hostname'] == "eagle"
+      when: ansible_facts['ansible_nodename'] == "eagle"
 
 # run roles
 #- hosts: all
